@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a090fe6-2b2a-44b9-9842-2942117b3989" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/config/AppConfig.java" />
+    <list default="true" id="8a090fe6-2b2a-44b9-9842-2942117b3989" name="Default" comment="讲解spring日志管理底层实现原理">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/springbootmvc_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/springbootmvc_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/springbootmvc/pom.xml" afterPath="$PROJECT_DIR$/springbootmvc/pom.xml" />
       <change beforePath="$PROJECT_DIR$/springbootmvc/readme.md" afterPath="$PROJECT_DIR$/springbootmvc/readme.md" />
       <change beforePath="$PROJECT_DIR$/springbootmvc/springbootmvc.iml" afterPath="$PROJECT_DIR$/springbootmvc/springbootmvc.iml" />
       <change beforePath="$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/springInitializer/SpringInitializer.java" afterPath="$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/springInitializer/SpringInitializer.java" />
-      <change beforePath="$PROJECT_DIR$/syz.iml" afterPath="$PROJECT_DIR$/syz.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/springbootmvc/target/" />
@@ -28,19 +23,19 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springbootmvc/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+            <state relative-caret-position="238">
+              <caret line="32" column="87" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/springbootmvc/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="115">
-                <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <first_editor relative-caret-position="410">
+                <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -58,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringInitializer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpringInitializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/springInitializer/SpringInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="64">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,10 +138,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/syz/springBoot/comfig/Application.java" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springbootmvc/readme.md" />
-        <option value="$PROJECT_DIR$/springbootmvc/pom.xml" />
         <option value="$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/springInitializer/SpringInitializer.java" />
+        <option value="$PROJECT_DIR$/springbootmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootmvc/readme.md" />
       </list>
     </option>
   </component>
@@ -295,6 +290,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/springbootmvc" />
+    <property name="SearchEverywhereHistoryKey" value="e&#9;PSI&#9;JAVA://org.junit.internal.runners.model.EachTestNotifier" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -488,7 +484,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550151662182</updated>
-      <workItem from="1550151663613" duration="3674000" />
+      <workItem from="1550151663613" duration="7590000" />
     </task>
     <task id="LOCAL-00001" summary="还原springboot项目为spring，开始模式实现springboot功能">
       <created>1550152617334</created>
@@ -497,11 +493,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550152617334</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="半模拟springboot方式实现初始化spring环境；实现spring mvc的5.0实现，无任何配置与tomcat内置（半实现）">
+      <created>1550155507197</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550155507197</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3674000" />
+    <option name="totallyTimeSpent" value="7590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -523,7 +526,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44407895" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41118422" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -574,7 +577,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="还原springboot项目为spring，开始模式实现springboot功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="还原springboot项目为spring，开始模式实现springboot功能" />
+    <MESSAGE value="半模拟springboot方式实现初始化spring环境；实现spring mvc的5.0实现，无任何配置与tomcat内置（半实现）" />
+    <option name="LAST_COMMIT_MESSAGE" value="半模拟springboot方式实现初始化spring环境；实现spring mvc的5.0实现，无任何配置与tomcat内置（半实现）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -616,25 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springbootmvc/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="115">
-            <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springbootmvc/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -645,13 +630,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/EachTestNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="76" lean-forward="true" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springbootmvc/src/main/java/com/syz/springInitializer/SpringInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        <state relative-caret-position="64">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springbootmvc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="87" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springbootmvc/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="410">
+            <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,10 @@ import javax.servlet.ServletRegistration;
  *这个类就充当了我们原始springmnv项目中的web.xml的配置
  */
 public class SpringInitializer implements WebApplicationInitializer {
-
+    /**
+     * 这个方法只是tomcat程序入口，不是所有容器的入口。比如jetty,这个代码就不适用jetty
+     * 这就是tomcat和jeety自spring中 的区别
+     */
     @Override
     public void onStartup(ServletContext servletCxt) {
         System.out.printf("========================");
