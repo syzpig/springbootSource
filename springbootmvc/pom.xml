@@ -24,6 +24,28 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.0.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.0.6.RELEASE</version>
+        </dependency>
+        <!-- 引入servlet是因为她不是java自带的-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope> <!--编译的时候使用它，当项目运行是使用tomcat内置的servlet包，这个引入的包会打包时丢失-->
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
@@ -35,34 +57,16 @@
         <finalName>springboot-mvc</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
+                <!--我们要运行测试项目时，没必要引入配置tomcat插件，可以引入tomcat plugin组件(初级开发者适合，同时这种插件tomcat只支持到7,后面没有在更新maven组件了)。但最好是学习springboot用main实现内嵌tomcat方式
+                  这里我们先半模拟springboot后面在实现-->
                 <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.2.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <configuration>
+                        <port>2345</port>
+                        <path>/</path>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
