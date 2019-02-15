@@ -51,12 +51,23 @@
             <version>3.1.0</version>
             <scope>provided</scope> <!--编译的时候使用它，当项目运行是使用tomcat内置的servlet包，这个引入的包会打包时丢失-->
         </dependency>
+        <!--内置tomcat开始-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-el</artifactId>
+            <version>8.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>8.5.5</version>
+        </dependency>
+        <!--内置tomcat结束-->
     </dependencies>
 
     <build>

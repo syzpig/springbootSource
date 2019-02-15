@@ -36,5 +36,16 @@ spring日志时是怎么回事。
 我们经常用到的commoms-logging这个架包就是提供了一套抽象编程，提供接口，由底层logf4j去实现
 
 jetty没有内置servlet-api所以pom加的scope的原因。
-   
+
+4.内置tomcat
+既然要将tomcat内置到项目中，并且能够成功的启动项目就要知道 tomcat  做了哪些事情 ，那么就必须先搞明白 
+一个 普通的web项目是如何被我们本地配置的tomcat启动并运行的
+　（1）、先告诉tomcat 要运行哪些项目 （也就是在使用eclipse、idea启动项目前对tomcat的配置工作、或linux上将编译后的war包拷贝到webapp下）
+     　 从而在 后面在启动tomcat时，tomcat就会加载编译后的.class项目 
+  （2）、 tomcat在加载编译后的项目时也会加载 web.xml或上篇博客的WebApplication文件 ，而在这个文件中
+     　 做的事情就是 加载spring进而加载springMVC 
+     　  加载SpringMVC: 将springMVC的DispatcherServlet注册到ServletContext容器  
+　那么只需要在项目内部集成tomcat时，运行main方法启动tomcat之前将编译后的项目和tomcat相关联，然后tomcat就能自动加载WebApplication类了
+
+springBoot启动tomcat源码跟踪https://blog.csdn.net/csdn_ygy/article/details/71202734
 
